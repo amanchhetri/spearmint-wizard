@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Work+Sans:400,500,600,700&display=swap');
+
+body{
+  background: rgb(34,193,195);
+  background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgb(45, 118, 253) 100%);
+  font-family: "work sans";
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.dog {
+  position: absolute;
+  width: 100px; /* Adjust the width and height of the dog image */
+  height: auto;
+  transition: transform 0.5s ease; /* Add smooth transition effect */
+}
+
+.text {
+  position: absolute;
+  padding: 8px 20px;
+  background-color: rgba(119, 117, 117, 0.404);
+  font-size: 16px;
+  border-radius: 5px;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translate(-50%, -200%);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translate(-50%, 0%);
   }
 }
