@@ -6,7 +6,7 @@ function Spearmint() {
     x: 0,
     y: 0,
     angle: 0,
-    flip: false,
+    flip: true,
   });
 
   const handleClick = (event) => {
@@ -30,6 +30,7 @@ function Spearmint() {
           transform: `translate(${position.x}px, ${position.y}px) scaleX(${
             position.flip ? -1 : 1
           })`,
+          transition: 'transform 1.5s linear'
         }}
       />
     </div>
